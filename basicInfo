@@ -1,0 +1,20 @@
+#script to find basic info on computer or server 
+#includes: hostname, dns server, IP memory, CPU, disk info, logged in users, permissions, processes 
+
+echo -e "Hostname: $(hostname -s) \n"
+echo "DNS Servers:" 
+cat /etc/resolv.conf
+echo -e "\n IP Address:" 
+ip addr | head -9 | tail -1
+echo -e "\n Memory Info:" 
+free
+echo -e "\n CPU Info:" 
+lscpu | grep CPU 
+echo -e "\n Disk Usage:"  
+df -H | head -2 
+echo -e "\n Who is logged in:" 
+$(who -a)
+echo -e "\n 777 Files:"  
+find /home -type f -perm 777
+echo -e "\n Top 10 Processes" 
+ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head 
