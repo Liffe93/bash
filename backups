@@ -1,0 +1,1 @@
+sudo tar cvvWf logs_backups.tar.gz --listed-incremental=snapshot.file /var/log --level=0 
