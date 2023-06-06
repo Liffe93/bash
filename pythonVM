@@ -1,0 +1,5 @@
+which python3
+pip3 install virtualenv
+virtualenv -p python3 ~/FolderVM
+source ~/FolderVM/bin/activate
+which python3 
