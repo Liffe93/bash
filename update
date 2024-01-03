@@ -1,0 +1,7 @@
+!# /bin/bash
+#update and upgrade linux system 
+sudo apt update
+apt list --upgradable 
+sudo apt upgrade -y
+sudo apt dist-upgrade
+sudo apt autoremove 
