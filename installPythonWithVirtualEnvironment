@@ -1,0 +1,22 @@
+!# /bin/bash
+
+#ensure python is installed 
+python
+python3
+
+#update python
+sudo apt-get upgrade python3
+
+#create virtual environemnt 
+sudo apt-get install python3-venv
+
+#make dir for environment 
+mkdir bhp
+cd bhp
+python3 -m venv venv3
+source venv3/bin/activate
+
+#should be in virtual environment 
+
+#install packages in environment 
+pip install lxml 
